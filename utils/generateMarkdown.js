@@ -12,10 +12,38 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+  
+  const readmeContent = `
+  # ${title}
+  
+  ${description}
+  
+  ## User story
+  
+  ${userStoryDesc}
+  
+  ## Acceptance criteria
+  
+  ${acceptanceCriteria}
+  
+  ## Go to my project
+  
+  To visit and review my project, [click here](${projectURL})
+  
+  ## Visual reference of project
+  The following image demonstrates the app's appearance:
+  
+  [${descriptionImg}](./assets/images/challenge_appReference.gif)
+  
+  ![](./Assets/challenge_appReference.gif)
+  
+  ## License
+  ${licenseContent}
+  
+  Markdown generated with **[README Creator](https://github.com/VanZittle/module9-challenge-ReadmeGenerator)**
+  
+  `;
+  return `# ${data.title};
 }
 
 module.exports = generateMarkdown;
-
